@@ -3,7 +3,7 @@ import React from "react";
 import { commands } from "./commands";
 import { useState, useEffect } from "react";
 
-import ReactMarkdown from "https://esm.sh/react-markdown@7";
+import ReactMarkdown from "react-markdown";
 
 function Prompt(props) {
   return (
