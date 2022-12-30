@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+// import { redirect } from "react-router-dom";
 
 import { commands } from "./commands";
-import { useState, useEffect } from "react";
 
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-function Prompt(props) {
+//TODO: lock cursor to in prompt
+function Prompt(props: any) {
   return (
     <div className="flex text-white">
       <div className="text-green-600"> Guest@portfolio:~$</div>
@@ -14,62 +16,76 @@ function Prompt(props) {
   );
 }
 
-function Output(props) {
-  return <ReactMarkdown className=" text-white">{props.value}</ReactMarkdown>;
+function Output(props: any) {
+  return (
+    <ReactMarkdown
+      className="text-white"
+      children={props.value}
+      remarkPlugins={[remarkGfm]}
+    />
+  );
 }
 
-export default class Terminal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      output: [],
-      prompt: "",
-    };
-    this.execute = this.execute.bind(this);
-  }
+export default function Terminal() {
+  const [output, setOutput] = useState<string[][]>([]);
+  const [prompt, setPrompt] = useState("");
 
-  execute(event: any) {
+  function execute(event: any) {
     event.preventDefault();
 
-    const command: string = event.target[0].value.toLowerCase().trim();
+    const command: string = prompt.toLowerCase().trim();
 
-    let temp = this.state.output;
-    if (command == "clear") {
-      temp = [];
-    } else {
-      temp.push([command, commands[command]]);
+    switch (command) {
+      case "clear":
+        output.splice(0, output.length);
+        break;
+      case "exit":
+        // redirect("/");
+        window.location.href = "/";
+        break;
+      case "cat readme":
+        output.push([command, commands["about"]]);
+        break;
+      default:
+        output.push([command, commands[command]]);
     }
 
-    this.setState({ output: temp });
-    this.setState({ prompt: "" });
+    setOutput(output);
+    setPrompt("");
   }
 
-  render() {
-    return (
-      <div className="bg-black h-screen text-lg">
-        <div>
-          {this.state.output?.map((element, index) => {
-            return (
-              <div className="" key={index}>
-                <Prompt value={element[0]} />
-                <Output value={element[1]} />
-              </div>
-            );
-          })}
-        </div>
-        <form className="flex text-green-600 " onSubmit={this.execute}>
-          Guest@portfolio:~$
-          <input
-            autoFocus
-            className="bg-black outline-none px-2 text-white"
-            onChange={(event) => {
-              this.setState({ prompt: event.target.value });
-            }}
-            type="text"
-            value={this.state.prompt}
-          />
-        </form>
+  useEffect(() => {
+    console.log("scrolling in function", output);
+    const screen = document.querySelector("#screen");
+    if (!screen) return;
+    screen.scrollTop = screen.scrollHeight;
+  }, [output.length]);
+
+  return (
+    <div className="bg-black h-screen overflow-auto text-lg" id="screen">
+      <div>
+        {output?.map((element: any, index: number) => {
+          return (
+            <div key={index}>
+              <Prompt value={element[0]} />
+              <Output value={element[1]} />
+            </div>
+          );
+        })}
       </div>
-    );
-  }
+      <form className="flex text-green-600" onSubmit={execute}>
+        Guest@portfolio:~$
+        <input
+          autoFocus
+          className="bg-black outline-none px-2 text-white"
+          onChange={(event) => {
+            setPrompt(event.target.value);
+          }}
+          type="text"
+          value={prompt}
+          onBlur={({ target }) => target.focus()}
+        />
+      </form>
+    </div>
+  );
 }
