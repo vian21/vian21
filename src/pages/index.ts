@@ -4,7 +4,7 @@ import Contacts from './Contacts';
 import Projects from './Projects';
 import Cv from './Cv';
 import Terminal from './Terminal';
-import NotFound from './NotFound';
+import NotFound from './NotFound.jsx';
 export {
     Home,
     About,

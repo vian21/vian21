@@ -1,3 +1,6 @@
+/**
+ * Note: The following component is written in JSX instead of TSX because figlet does not fully support types
+ */
 import figlet from "figlet";
 import standard from "figlet/importable-fonts/Standard";
 
@@ -5,7 +8,7 @@ figlet.parseFont("Standard", standard);
 
 export default function NotFound() {
   let text = "404 Not Found";
-  figlet.text(text, { font: "Standard" }, function (err: any, data: string) {
+  figlet.text(text, { font: "Standard" }, function (err, data) {
     text = data;
   });
   return (
