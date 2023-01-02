@@ -49,10 +49,11 @@ jobs:
         uses: actions/configure-pages@v1
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
+          name: build-artifact
           # Upload entire repository
-          path: ./dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
