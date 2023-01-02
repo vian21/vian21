@@ -49,7 +49,7 @@ jobs:
         uses: actions/configure-pages@v1
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: build-artifact
           # Upload entire repository
