@@ -30,4 +30,4 @@ git commit -m 'deploy'
 
 # Clean up
 cd -
-rm -r dist
+rm -r -f dist
