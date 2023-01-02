@@ -24,6 +24,6 @@ git commit -m 'deploy'
  #git push -f git@github.com:vian21/vian21.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
- git push -f git@github.com:vian21/vian21.github.io.git main:gh-pages
+ git push -f git@github.com:vian21/vian21.git main:gh-pages
 
 cd -
