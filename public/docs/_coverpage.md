@@ -1,12 +1,7 @@
-![logo](https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/docsify-darklight-theme-logo.png)
+# Hello World!
 
-# docsify-darklight-theme-starter
+Welcome to my lair where I stash all the goodies I learnt throughout the years
 
-> A magical documentation site generator with dark and light mode switch.
+> "Insanity Is Doing the Same Thing Over and Over Again and Expecting Different Results" 
 
-- Themes are customizable based on your color preferences.
-- Themes are remembered and retrieved from local storage.
-- Redesigned search box.
-
-[Preview](https://boopathikumar018.github.io/docsify-darklight-theme)
-[Getting Started](#headline)
+Albert Einstein

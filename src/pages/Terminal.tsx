@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { redirect } from "react-router-dom";
 
-import { commands } from "./commands";
+import { commands } from "../assets/commands";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -19,7 +19,7 @@ function Prompt(props: any) {
 function Output(props: any) {
   return (
     <ReactMarkdown
-      className="text-white"
+      className="text-white px-2"
       children={props.value}
       remarkPlugins={[remarkGfm]}
     />

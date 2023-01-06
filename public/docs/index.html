@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport"
@@ -17,13 +17,16 @@
 </head>
 
 <body>
-  <div id="app">We are building somthing special for you ...</div>
+  <div id="app">Loading docs.</div>
   <script>
     window.$docsify = {
       search: 'auto',
       // coverpage: true,
       loadNavbar: true,
+      loadSidebar: true,
       name: 'Doc stash',
+      nativeEmoji: true,
+      subMaxLevel: 2,
       search: {
         noData: {
           '/': 'No results!'
@@ -31,13 +34,13 @@
         paths: 'auto',
         placeholder: {
           '/': 'Search'
-        }
+        },
       },
       plugins: [
         function (hook) {
           var footer = [
             '<footer style="text-align: center;margin-top: 50px;">',
-            '<span> Your Project  &copy; 2020 </span>',
+            '<span> Patrick Igiraneza  &copy; 2023 </span>',
             '</footer>'
           ].join('');
 

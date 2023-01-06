@@ -1,5 +1,4 @@
 <!-- - [Home]() -->
 
-- [Quick Start](quickstart.md)
-- [Getting Started](getting-started.md)
-- [Tutorials](tutorials.md)
+- [Home](/)
+- [Go to main](https://vian21.github.io)

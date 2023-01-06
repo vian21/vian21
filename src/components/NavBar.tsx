@@ -30,17 +30,17 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/About">
+            <Link className="nav-link" to="/about">
               About
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/Projects">
+            <Link className="nav-link" to="/projects">
               Projects
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/CV">
+            <Link className="nav-link" to="/cv">
               CV
             </Link>
           </li>
@@ -53,6 +53,11 @@ export default function NavBar() {
             <Link className="nav-link" to="/shell">
               Terminal
             </Link>
+          </li>
+          <li>
+            <a className="nav-link" href="/docs/index.html">
+              Docs
+            </a>
           </li>
           <li>
             <button className="nav-link" onClick={toggleMode}>

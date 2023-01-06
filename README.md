@@ -4,7 +4,7 @@
 
 **Website**: [vian21.github.io](https://vian21.github.io)
 
-**Linkedin**: [@patrick31](https://linkedin.com/patrick31)
+**Linkedin**: [@patrick31](https://linkedin.com/in/patrick31/)
 
 **Github**: [@vian21](https://github.com/vian21)
 
@@ -14,11 +14,13 @@
 - Typescript
 - Python
 - PHP
-- Rust(under development)
-- C++(under development)
+- Rust (under development)
+- C++ (under development)
 
 ## Frameworks:
 
 - React
+- Fastify | ExpressJs
+- Jest
 - Next.js
 - Laravel
