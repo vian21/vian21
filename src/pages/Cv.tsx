@@ -1,7 +1,7 @@
 export default function Cv() {
   return (
     <div>
-      <p>My cv</p>
+      <p>My Cv</p>
     </div>
   );
 }

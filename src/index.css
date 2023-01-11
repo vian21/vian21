@@ -9,6 +9,13 @@ html {
   @apply h-screen text-black bg-white;
 }
 
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 html.dark {
   @apply bg-slate-800 text-white;
 }
@@ -19,4 +26,20 @@ html.dark {
 
 html.dark .nav-link {
   @apply text-white;
+}
+
+h1,
+p {
+  @apply m-3
+}
+
+.container {
+  min-height: 100%;
+  margin: 0 auto -80px;
+
+}
+
+.footer {
+  height: 800px;
+
 }
