@@ -10,17 +10,22 @@
 
 ## Programming Languages:
 
-- Javascript
-- Typescript
 - Python
+- Javascript
+- Node.Js
+- Typescript
+- Java
+- C++
+- Rust
+- Bash
+- Makefile
 - PHP
-- Rust (under development)
-- C++ (under development)
 
 ## Frameworks:
 
 - React
+- Next.js
 - Fastify | ExpressJs
 - Jest
-- Next.js
 - Laravel
+- Three.js | React-Three-Fiber
