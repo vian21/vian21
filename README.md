@@ -8,6 +8,8 @@
 
 **Github**: [@vian21](https://github.com/vian21)
 
+Actively searching for a Summer 2023 internship
+
 ## Programming Languages:
 
 - Python
