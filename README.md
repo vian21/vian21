@@ -8,7 +8,7 @@
 
 **Github**: [@vian21](https://github.com/vian21)
 
-Actively searching for a Summer 2023 internship
+Actively searching for a Winter 2024 internship
 
 ## Programming Languages:
 
