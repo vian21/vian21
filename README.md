@@ -8,20 +8,18 @@
 
 **Github**: [@vian21](https://github.com/vian21)
 
-Actively searching for a Summer 2025 internship
-
 ## Programming Languages:
 
-- Python
+- C/C++
 - Javascript
 - Node.Js
 - Typescript
+- Python
 - Java
-- C++
-- Rust
 - Bash
 - Makefile
 - PHP
+- Rust
 
 ## Frameworks:
 
